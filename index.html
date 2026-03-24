@@ -58,14 +58,21 @@ function addname(){//function that will add my name to the canvas
 }
 
 function addimage (){
-	const img = new Image(); // create new img element
+	var img = new Image(); // create new img element
 	var c = document.getElementById("myCanvas"); //makes the canvas a variable
  	var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
 	
-  	img.addEventListener("load", () => {
-  	ctx.drawImage(img, 10, 10);
+  	img.addEventListener("load", () => { //allows for painting to load
+  	ctx.drawImage(img, 10, 10); // acts as marker for where painting should start
 	});
 	img.src = "waterlilies.jpg"; // img is the painting uploaded
+}
+
+function clearcanvas(){
+	var c = document.getElementById("myCanvas"); //makes the canvas a variable 
+	var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
+	ctx.clearRect(0, 0, c.width, c.height);//clears whole canvas 
+
 }
 </script>
 
@@ -106,6 +113,9 @@ function addimage (){
 	</p>	
 	<p>
 		<a onclick="addimage();" class="w3-btn w3-black"> Add an Image! </a> <!-- creates a button that calls the addname() function-->
+	</p>	
+	<p>
+		<a onclick="clearcanvas();" class="w3-btn w3-black"> Clear the Canvas! </a> <!-- creates a button that calls the addname() function-->
 	</p>	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
