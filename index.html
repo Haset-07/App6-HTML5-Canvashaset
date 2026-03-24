@@ -63,7 +63,7 @@ function addimage (){
  	var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
 	
   	img.addEventListener("load", () => { //allows for painting to load
-  	ctx.drawImage(img, 10, 10); // acts as marker for where painting should start
+  	ctx.drawImage(img, 10, 10, 290, 190); // acts as marker for where painting should start
 	});
 	img.src = "waterlilies.jpg"; // img is the painting uploaded
 }
