@@ -59,11 +59,13 @@ function addname(){//function that will add my name to the canvas
 
 function addimage (){
 	const img = new Image(); // create new img element
-	img.src = "waterlilies.jpg"; // img is the painting uploaded
 	var c = document.getElementById("myCanvas"); //makes the canvas a variable
  	var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
-  	var img = document.getElementById("waterlilies"); //obtaining the image
- 	ctx.drawImage(img,10,10); //puts image on canvas
+	
+  	img.addEventListener("load", () => {
+  	ctx.drawImage(img, 10, 10);
+	});
+	img.src = "waterlilies.jpg"; // img is the painting uploaded
 }
 </script>
 
