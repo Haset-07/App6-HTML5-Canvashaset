@@ -38,10 +38,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-var c = document.getElementById("myCanvas"); //makes the canvas a variable 
-var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
+
 	
 function addrect(){ //function that will add rectangle to canvas w/ lines
+	var c = document.getElementById("myCanvas"); //makes the canvas a variable 
+	var ctx = c.getContext("2d"); // acts like a pen on canvas basically 
 	ctx.moveTo(10,10); //where rectangle starts
 	ctx.lineTo(210,10); //move to the right
 	ctx.lineTo(210,110); //move down
